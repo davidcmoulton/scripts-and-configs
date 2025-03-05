@@ -1,3 +1,19 @@
+# Example usage:
+#   switch-to-php-version 8.4
+#
+# Assumptions:
+# - OSX
+# - Using Homebrew to manage PHP installations
+#
+# This:
+# - checks the user has provided what we assume to be the version number of their desired PHP
+# - checks that the desired version is different from the current PHP version 
+# - checks that the desired version is installed
+# - unlinks from brew whatever the current PHP version is
+# - links into brew the desired version 
+# - reports what the current version of PHP now is
+
+
 TARGETPHPVERSION=$1
 
 if [ -z TARGETPHPVERSION ]; then
