@@ -14,7 +14,9 @@
 # - unlinks from brew whatever the current PHP version is
 # - links into brew the desired version 
 # - reports what the current version of PHP now is
-
+#
+# Caveat:
+# Quick and dirty to get the desired outcome, it relies on grepping the output of various commands to make decisions and so might break without warning should those outputs change. You have been warned.
 
 TARGETPHPVERSION=$1
 
