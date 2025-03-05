@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Example usage:
 #   switch-to-php-version 8.4
 #
