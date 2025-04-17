@@ -1,0 +1,27 @@
+[includeIf "gitdir:~/work/elife/"]
+  path = .gitconfig-work
+[includeIf "gitdir:~/work/personal/"]
+  path = .gitconfig-personal
+
+[user]
+	name = David Moulton
+# email setting is handled by the respective .gitconfig-work and .gitconfig-personal files
+# referenced in the conditional includes. The old setting is kept here for reference.
+#	email = d.moulton@elifesciences.org
+
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+
+[color]
+	ui = auto
+
+[pull]
+	rebase = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
